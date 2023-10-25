@@ -1,0 +1,49 @@
+Git e GitHub
+Versionamento de código - Sistemas de controle de versão (VCS) - Controlam as versões de um arquivo ao longo do tempo (histórico, datas, autor etc.)
+
+VCS - Centralizado - Servidor Central - Não é possível utilizar caso fique fora do ar.
+CVS / Subversion 
+
+VCS - Distribuído - Servidor - Cada repositório é duplicado localmente - Possível utilizar mesmo que esteja fora do ar - Clona o repositório completo, que inclui o histórico de versões. - Cada clone é uma espécie de backup. 
+Git / Mercurial 
+
+Repositório local = Git | Repositório remoto = GitHub
+
+GIT 
+Comandos: 
+git clone - clona um repositório existente para um novo diretório (pasta) local. 
+git commit - grava alterações no repositório 
+git pull - “puxa” as alterações do repositório remoto para o local (busca e mescla)
+git config 
+git init 
+
+mkdir (make directory) - padrão do terminal > mkdir “nome da pasta” > cd nome da pasta>git init >git status > touch “nome do arquivo.md/txt”>git status> git add “nome do arquivo” > git status > git commit -m” nome pro commit”
+
+clonar um repositório com outro nome:  git clone URL nome-do-diretorio-local
+git remote add origin URL 
+git status - mostra a árvore de preparação 
+criar um arquivo README.md > editar (vs code) > comando git add > git status > git commit -m “commit inicial” > git log para visualizar informações do arquivo 
+gitignore - Especifica arquivos intencionalmente não rastreados para serem ignorados (que não serão salvos ou apareçam) 
+.gitkeep é um arquivo oculto pelo sistema que serve apenas para versionar pastas vazias
+git restore descarta todas as alterações feitas localmente 
+git amend - alterar a mensagem do último commit (git commit –amend -m”nova mensagem”)
+git reset -soft/mixed/hard
+git push - envia as alterações do repositório local para o remoto -> git push origin main
+git pull - atualizar localmente as alterações que foram feitas no github 
+
+branch main irá apontar pro último commit criado 
+criar nova commit > echo "commit-2-branch-main" > commit-2-branch-main.txt > git add . > git commit -m”0000” > 
+git merge - mesclar a branch teste com a branch main 
+git branch - lista das branchs atuais 
+git branch -d teste - exclui a branch de teste 
+*ler sobre convenções para nomes de branches e mensagens dos commits
+
+git fetch 
+git diff 
+
+alterações do remoto para o local - merge origin/main - baixar conteúdo da branch remota sem mesclar com a branch local 
+clonar um repositório com várias branches, porém clonando somente uma: 
+git clone URL  - -branch  nome-da-branch - -single-branch
+git stash
+git stash pop
+git stash apply 
